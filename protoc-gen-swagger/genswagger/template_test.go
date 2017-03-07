@@ -45,14 +45,16 @@ func TestMessageToQueryParameters(t *testing.T) {
 					Name: proto.String("ExampleMessage"),
 					Field: []*protodescriptor.FieldDescriptorProto{
 						{
-							Name:   proto.String("a"),
-							Type:   protodescriptor.FieldDescriptorProto_TYPE_STRING.Enum(),
-							Number: proto.Int32(1),
+							Name:     proto.String("a"),
+							JsonName: proto.String("a"),
+							Type:     protodescriptor.FieldDescriptorProto_TYPE_STRING.Enum(),
+							Number:   proto.Int32(1),
 						},
 						{
-							Name:   proto.String("b"),
-							Type:   protodescriptor.FieldDescriptorProto_TYPE_DOUBLE.Enum(),
-							Number: proto.Int32(2),
+							Name:     proto.String("b"),
+							JsonName: proto.String("b"),
+							Type:     protodescriptor.FieldDescriptorProto_TYPE_DOUBLE.Enum(),
+							Number:   proto.Int32(2),
 						},
 					},
 				},
@@ -81,6 +83,7 @@ func TestMessageToQueryParameters(t *testing.T) {
 					Field: []*protodescriptor.FieldDescriptorProto{
 						{
 							Name:     proto.String("nested"),
+							JsonName: proto.String("nested"),
 							Type:     protodescriptor.FieldDescriptorProto_TYPE_MESSAGE.Enum(),
 							TypeName: proto.String(".example.Nested"),
 							Number:   proto.Int32(1),
@@ -91,12 +94,14 @@ func TestMessageToQueryParameters(t *testing.T) {
 					Name: proto.String("Nested"),
 					Field: []*protodescriptor.FieldDescriptorProto{
 						{
-							Name:   proto.String("a"),
-							Type:   protodescriptor.FieldDescriptorProto_TYPE_STRING.Enum(),
-							Number: proto.Int32(1),
+							Name:     proto.String("a"),
+							JsonName: proto.String("a"),
+							Type:     protodescriptor.FieldDescriptorProto_TYPE_STRING.Enum(),
+							Number:   proto.Int32(1),
 						},
 						{
 							Name:     proto.String("deep"),
+							JsonName: proto.String("deep"),
 							Type:     protodescriptor.FieldDescriptorProto_TYPE_MESSAGE.Enum(),
 							TypeName: proto.String(".example.Nested.DeepNested"),
 							Number:   proto.Int32(2),
@@ -106,12 +111,14 @@ func TestMessageToQueryParameters(t *testing.T) {
 						Name: proto.String("DeepNested"),
 						Field: []*protodescriptor.FieldDescriptorProto{
 							{
-								Name:   proto.String("b"),
-								Type:   protodescriptor.FieldDescriptorProto_TYPE_STRING.Enum(),
-								Number: proto.Int32(1),
+								Name:     proto.String("b"),
+								JsonName: proto.String("b"),
+								Type:     protodescriptor.FieldDescriptorProto_TYPE_STRING.Enum(),
+								Number:   proto.Int32(1),
 							},
 							{
 								Name:     proto.String("c"),
+								JsonName: proto.String("c"),
 								Type:     protodescriptor.FieldDescriptorProto_TYPE_ENUM.Enum(),
 								TypeName: proto.String(".example.Nested.DeepNested.DeepEnum"),
 								Number:   proto.Int32(2),
