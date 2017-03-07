@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 
-	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
+	"github.com/postmates/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
 )
 
 type param struct {

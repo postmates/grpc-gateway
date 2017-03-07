@@ -7,8 +7,8 @@ import (
 	"text/template"
 
 	"github.com/golang/glog"
-	"github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
-	"github.com/grpc-ecosystem/grpc-gateway/utilities"
+	"github.com/postmates/grpc-gateway/protoc-gen-grpc-gateway/descriptor"
+	"github.com/postmates/grpc-gateway/utilities"
 )
 
 type param struct {
